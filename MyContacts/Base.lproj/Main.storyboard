@@ -28,7 +28,7 @@
         <!--欢迎使用私人通讯录-->
         <scene sceneID="MKQ-hr-Yhy">
             <objects>
-                <viewController id="iWv-TZ-hll" customClass="JHLoginViewController" sceneMemberID="viewController">
+                <viewController id="iWv-TZ-hll" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V1H-Tc-LGD"/>
                         <viewControllerLayoutGuide type="bottom" id="p5I-KV-7ue"/>
