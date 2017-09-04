@@ -27,6 +27,14 @@
     // 注意点: 一定要写上通知的发布者
     [center addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.nameField];
     [center addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.phoneField];
+    
+    [self addLoginButtonLayer];
+}
+
+- (void)addLoginButtonLayer {
+    self.addBtn.layer.cornerRadius = 8;
+    self.addBtn.layer.borderColor = [UIColor blueColor].CGColor;
+    self.addBtn.layer.borderWidth = 1;
 }
 
 - (void)textChange
