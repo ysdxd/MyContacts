@@ -2,7 +2,7 @@
 
 #import "ContatesViewController.h"
 #import "AddViewController.h"
-#import "NJContatc.h"
+#import "Contatc.h"
 #import "EditViewController.h"
 #import "TableViewCell.h"
 
@@ -30,6 +30,7 @@
     // 给当前控制器的当前行控制器添加一个按钮
     UIBarButtonItem *addBtn = self.navigationItem.rightBarButtonItem;
     UIBarButtonItem *editBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editBtnClick)];
+    
     self.navigationItem.rightBarButtonItems = @[editBtn,addBtn];
 }
 
@@ -110,7 +111,6 @@
     // 在这个地方保存用户添加的所有的联系人信息
     [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
     
-    
     // 2.刷新表格
     [self.tableView reloadData];
 }
@@ -169,10 +169,9 @@
 {
     if (indexPath.row % 2 == 0) {
         return UITableViewCellEditingStyleInsert;
-    }else
-    {
+    } else {
         return UITableViewCellEditingStyleDelete;
-    }
+    }
 }
 
 -(NSMutableArray *)contatcs
@@ -180,6 +179,7 @@
     // 从文件中读取数组
     // 如果第一次启动没有文件,就创建一个空的数组用于保存数据
     if (_contatcs == nil) {
+        //对象归档
         _contatcs = [NSKeyedUnarchiver unarchiveObjectWithFile:NJContactsPath];
         if (_contatcs == nil) {
             _contatcs = [NSMutableArray array];
@@ -188,7 +188,7 @@
     
     return _contatcs;
 }
-
+
 #pragma mark - 数据源
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

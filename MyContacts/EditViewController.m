@@ -1,7 +1,7 @@
 
 
 #import "EditViewController.h"
-#import "NJContatc.h"
+#import "Contatc.h"
 
 @interface JHEditViewController ()
 

@@ -1,12 +1,12 @@
 
 
 #import <UIKit/UIKit.h>
-@class NJContatc;
+@class Contatc;
 
-@interface JHContatcCell : UITableViewCell
+@interface ContatcCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
-@property (nonatomic, strong) NJContatc *contatc;
+@property (nonatomic, strong) Contatc *contatc;
 
 @end

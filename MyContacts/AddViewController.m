@@ -1,6 +1,6 @@
 
 #import "AddViewController.h"
-#import "NJContatc.h"
+#import "Contatc.h"
 
 @interface JHAddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -49,9 +49,9 @@
     [self.nameField becomeFirstResponder];
 }
 
-- (IBAction)addBtnOnClick:(UIButton *)sender
-{
-    // 1.移除栈顶控制器
+- (IBAction)addBtnOnClick:(UIButton *)sender {
+    
+    // 1.移除栈顶控制器,返回到上一页
     [self.navigationController popViewControllerAnimated:YES];
     
     //2.获取用户输入的姓名和电话
@@ -69,9 +69,10 @@
     }
 }
 
--(void)dealloc
-{
+-(void)dealloc {
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 heima. All rights reserved.
 //
 
-#import "NJContatc.h"
+#import "Contatc.h"
 
-@implementation NJContatc
+@implementation Contatc
 
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {

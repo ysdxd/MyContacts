@@ -1,14 +1,14 @@
 
 
 #import "TableViewCell.h"
-#import "NJContatc.h"
+#import "Contatc.h"
 
-@interface JHContatcCell ()
+@interface ContatcCell ()
 @property (nonatomic, weak) UIView *divider;
 
 @end
 
-@implementation JHContatcCell
+@implementation ContatcCell
 
 +(instancetype)cellWithTableView:(UITableView *)tableView
 {
@@ -16,10 +16,11 @@
     
     // 首先回去缓存池中找, 如果找不到回去storyboard中找有没有叫做contatcs的cell,有就创建
     JHContatcCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     return cell;
 }
 
--(void)setContatc:(NJContatc *)contatc
+-(void)setContatc:(Contatc *)contatc
 {
     _contatc = contatc;
     

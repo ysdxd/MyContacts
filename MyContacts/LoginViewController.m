@@ -1,11 +1,11 @@
 
 #import "LoginViewController.h"
-#import "MBProgressHUD+NJ.h"
+#import "MBProgressHUD+JS.h"
 
-#define NJAccount @"account"
-#define NJPwd @"pwd"
-#define NJRemPwd @"remPwd"
-#define NJAutoLogin @"autoLogin"
+#define Account @"account"
+#define Pwd @"pwd"
+#define RemPwd @"remPwd"
+#define AutoLogin @"autoLogin"
 
 @interface LoginViewController ()
 
@@ -62,20 +62,20 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     // 设置账号
-    self.accountField.text = [defaults objectForKey:NJAccount];
+    self.accountField.text = [defaults objectForKey:Account];
     // 设置密码
     // 判断是否需要记住密码
-    //    BOOL isSavePwd = [defaults boolForKey:NJRemPwd];
+    //    BOOL isSavePwd = [defaults boolForKey:RemPwd];
     //    [self.remPwdSwitch setOn:isSavePwd animated:YES];
     
-    [self.remPwdSwitch setOn:[defaults boolForKey:NJRemPwd] animated:YES];
+    [self.remPwdSwitch setOn:[defaults boolForKey:RemPwd] animated:YES];
     
     if (self.remPwdSwitch.isOn) {
-        self.pwdField.text = [defaults objectForKey:NJPwd];
+        self.pwdField.text = [defaults objectForKey:Pwd];
     }
     
-    //    BOOL isAutoLogin = [defaults boolForKey:NJAutoLogin];
-    [self.autoLoginSwitch setOn:[defaults boolForKey:NJAutoLogin] animated:YES];
+    //    BOOL isAutoLogin = [defaults boolForKey:AutoLogin];
+    [self.autoLoginSwitch setOn:[defaults boolForKey:AutoLogin] animated:YES];
     if (self.autoLoginSwitch.isOn) {
         
         // 自动登录相当于调用登录方法
@@ -136,10 +136,10 @@
         
         // 5.保存用户数据
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:self.accountField.text forKey:NJAccount];
-        [defaults setObject:self.pwdField.text forKey:NJPwd];
-        [defaults setBool:self.remPwdSwitch.isOn forKey:NJRemPwd];
-        [defaults setBool:self.autoLoginSwitch.isOn forKey:NJAutoLogin];
+        [defaults setObject:self.accountField.text forKey:Account];
+        [defaults setObject:self.pwdField.text forKey:Pwd];
+        [defaults setBool:self.remPwdSwitch.isOn forKey:RemPwd];
+        [defaults setBool:self.autoLoginSwitch.isOn forKey:AutoLogin];
         [defaults synchronize];
         
     });

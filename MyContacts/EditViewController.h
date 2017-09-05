@@ -1,11 +1,11 @@
 
 
 #import <UIKit/UIKit.h>
-@class JHEditViewController,NJContatc;
+@class JHEditViewController,Contatc;
 
 @protocol JHEditViewControllerDelegate <NSObject>
 
--(void)editViewControllerDidClickSavBtn:(JHEditViewController *)editViewController contatc:(NJContatc *)cpmtatc;
+-(void)editViewControllerDidClickSavBtn:(JHEditViewController *)editViewController contatc:(Contatc *)cpmtatc;
 
 @end
 
@@ -14,7 +14,7 @@
 /**
  *  用于接收联系人列表传递过来的数据
  */
-@property (nonatomic, strong) NJContatc *contatc;
+@property (nonatomic, strong) Contatc *contatc;
 
 @property (nonatomic, weak) id<JHEditViewControllerDelegate> delegate;
 

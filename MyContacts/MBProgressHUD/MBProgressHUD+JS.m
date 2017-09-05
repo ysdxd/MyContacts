@@ -1,19 +1,16 @@
-//
-//  MBProgressHUD+NJ.m
-//
-//  Created by 李南江 on 14-5-5.
-//  Copyright (c) 2014年 itcast. All rights reserved.
-//
 
-#import "MBProgressHUD+NJ.h"
+#import "MBProgressHUD+JS.h"
 
-@implementation MBProgressHUD (NJ)
+@implementation MBProgressHUD (JS)
+
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    
     // 快速显示一个提示信息
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
     hud.labelText = text;
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];

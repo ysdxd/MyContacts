@@ -17,10 +17,10 @@
 		8D358F8D1F5D576900327C95 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F731F5D576900327C95 /* LoginViewController.m */; };
 		8D358F8E1F5D576900327C95 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F751F5D576900327C95 /* TableViewCell.m */; };
 		8D358F8F1F5D576900327C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F761F5D576900327C95 /* main.m */; };
-		8D358F901F5D576900327C95 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F791F5D576900327C95 /* MBProgressHUD+NJ.m */; };
+		8D358F901F5D576900327C95 /* MBProgressHUD+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F791F5D576900327C95 /* MBProgressHUD+JS.m */; };
 		8D358F911F5D576900327C95 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D358F7A1F5D576900327C95 /* MBProgressHUD.bundle */; };
 		8D358F921F5D576900327C95 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F7C1F5D576900327C95 /* MBProgressHUD.m */; };
-		8D358F931F5D576900327C95 /* NJContatc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F7E1F5D576900327C95 /* NJContatc.m */; };
+		8D358F931F5D576900327C95 /* Contatc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F7E1F5D576900327C95 /* Contatc.m */; };
 		8D358F941F5D576900327C95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D358F801F5D576900327C95 /* ViewController.m */; };
 		8D358F951F5D576900327C95 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D358F811F5D576900327C95 /* LaunchScreen.strings */; };
 		8D358F961F5D576900327C95 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D358F831F5D576900327C95 /* Main.strings */; };
@@ -43,13 +43,13 @@
 		8D358F741F5D576900327C95 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		8D358F751F5D576900327C95 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		8D358F761F5D576900327C95 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8D358F781F5D576900327C95 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
-		8D358F791F5D576900327C95 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
+		8D358F781F5D576900327C95 /* MBProgressHUD+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JS.h"; sourceTree = "<group>"; };
+		8D358F791F5D576900327C95 /* MBProgressHUD+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JS.m"; sourceTree = "<group>"; };
 		8D358F7A1F5D576900327C95 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		8D358F7B1F5D576900327C95 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8D358F7C1F5D576900327C95 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8D358F7D1F5D576900327C95 /* NJContatc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJContatc.h; sourceTree = "<group>"; };
-		8D358F7E1F5D576900327C95 /* NJContatc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJContatc.m; sourceTree = "<group>"; };
+		8D358F7D1F5D576900327C95 /* Contatc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contatc.h; sourceTree = "<group>"; };
+		8D358F7E1F5D576900327C95 /* Contatc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contatc.m; sourceTree = "<group>"; };
 		8D358F7F1F5D576900327C95 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D358F801F5D576900327C95 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D358F821F5D576900327C95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 				8D358F751F5D576900327C95 /* TableViewCell.m */,
 				8D358F761F5D576900327C95 /* main.m */,
 				8D358F771F5D576900327C95 /* MBProgressHUD */,
-				8D358F7D1F5D576900327C95 /* NJContatc.h */,
-				8D358F7E1F5D576900327C95 /* NJContatc.m */,
+				8D358F7D1F5D576900327C95 /* Contatc.h */,
+				8D358F7E1F5D576900327C95 /* Contatc.m */,
 				8D358F7F1F5D576900327C95 /* ViewController.h */,
 				8D358F801F5D576900327C95 /* ViewController.m */,
 				8D358F811F5D576900327C95 /* LaunchScreen.strings */,
@@ -109,8 +109,8 @@
 		8D358F771F5D576900327C95 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				8D358F781F5D576900327C95 /* MBProgressHUD+NJ.h */,
-				8D358F791F5D576900327C95 /* MBProgressHUD+NJ.m */,
+				8D358F781F5D576900327C95 /* MBProgressHUD+JS.h */,
+				8D358F791F5D576900327C95 /* MBProgressHUD+JS.m */,
 				8D358F7A1F5D576900327C95 /* MBProgressHUD.bundle */,
 				8D358F7B1F5D576900327C95 /* MBProgressHUD.h */,
 				8D358F7C1F5D576900327C95 /* MBProgressHUD.m */,
@@ -200,8 +200,8 @@
 				8D358F921F5D576900327C95 /* MBProgressHUD.m in Sources */,
 				8D358F941F5D576900327C95 /* ViewController.m in Sources */,
 				8D358F851F5D576900327C95 /* AppDelegate.m in Sources */,
-				8D358F931F5D576900327C95 /* NJContatc.m in Sources */,
-				8D358F901F5D576900327C95 /* MBProgressHUD+NJ.m in Sources */,
+				8D358F931F5D576900327C95 /* Contatc.m in Sources */,
+				8D358F901F5D576900327C95 /* MBProgressHUD+JS.m in Sources */,
 				8D358F8F1F5D576900327C95 /* main.m in Sources */,
 				8D358F8E1F5D576900327C95 /* TableViewCell.m in Sources */,
 			);
