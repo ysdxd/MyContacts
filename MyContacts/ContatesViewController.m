@@ -6,9 +6,9 @@
 #import "EditViewController.h"
 #import "TableViewCell.h"
 
-#define NJContactsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"contacts.arc"]
+#define ContactsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"contacts.arc"]
 
-@interface JHContatesViewController ()<UIActionSheetDelegate,JHAddViewControllerDelegate,JHEditViewControllerDelegate>
+@interface ContatesViewController ()<UIActionSheetDelegate,AddViewControllerDelegate,EditViewControllerDelegate>
 
 /** 点击注销按钮 */
 - (IBAction)logout:(UIBarButtonItem *)sender;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation JHContatesViewController
+@implementation ContatesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,19 +67,19 @@
 {
     // 0.判断目标控制器是添加还是编辑
     // 1.取出目标控制器
-    UIViewController *vc = (JHAddViewController *)segue.destinationViewController;
-    if ([vc isKindOfClass:[JHAddViewController class]]) {
-        JHAddViewController *addVc = (JHAddViewController *) vc;
+    UIViewController *vc = (AddViewController *)segue.destinationViewController;
+    if ([vc isKindOfClass:[AddViewController class]]) {
+        AddViewController *addVc = (AddViewController *) vc;
         // 2.设置代理
         addVc.delegate = self;
-    }else if ([vc isKindOfClass:[JHEditViewController class]])
+    }else if ([vc isKindOfClass:[EditViewController class]])
     {
         // 传递数据
-        JHEditViewController *editVc = (JHEditViewController *)vc;
+        EditViewController *editVc = (EditViewController *)vc;
         // 通过tableview获取被点击的行号
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         // 取出被点击行的模型
-        NJContatc *c = self.contatcs[path.row];
+        Contatc *c = self.contatcs[path.row];
         //NSLog(@"联系人列表 %p" , c);
         // 赋值模型
         editVc.contatc = c;
@@ -88,14 +88,14 @@
     }
 }
 
-#pragma mark - JHEditViewControllerDelegate
-- (void)editViewControllerDidClickSavBtn:(JHEditViewController *)editViewController contatc:(NJContatc *)cpmtatc
+#pragma mark - EditViewControllerDelegate
+- (void)editViewControllerDidClickSavBtn:(EditViewController *)editViewController contatc:(Contatc *)cpmtatc
 {
     // 1.修改模型
     //    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     //    self.contatcs[path.row] = cpmtatc;
     
-    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
+    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:ContactsPath];
     
     
     // 2.刷新表格
@@ -109,7 +109,7 @@
     [self.contatcs addObject:contatc];
     
     // 在这个地方保存用户添加的所有的联系人信息
-    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
+    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:ContactsPath];
     
     // 2.刷新表格
     [self.tableView reloadData];
@@ -135,14 +135,14 @@
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
         
         // 3.更新保存的文件
-        [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
+        [NSKeyedArchiver archiveRootObject:self.contatcs toFile:ContactsPath];
     }else if (UITableViewCellEditingStyleInsert == editingStyle)
     {
         // 添加一条数据
         //        NSLog(@"添加一条数据");
         
         // 1.修改数据
-        NJContatc *c = [[NJContatc alloc] init];
+        Contatc *c = [[Contatc alloc] init];
         c.name = @"xff";
         c.phoneNumber = @"123456";
         
@@ -180,7 +180,7 @@
     // 如果第一次启动没有文件,就创建一个空的数组用于保存数据
     if (_contatcs == nil) {
         //对象归档
-        _contatcs = [NSKeyedUnarchiver unarchiveObjectWithFile:NJContactsPath];
+        _contatcs = [NSKeyedUnarchiver unarchiveObjectWithFile:ContactsPath];
         if (_contatcs == nil) {
             _contatcs = [NSMutableArray array];
         }
@@ -200,7 +200,7 @@
    
     
     // 1.创建cell
-    JHContatcCell *cell = [JHContatcCell cellWithTableView:tableView];
+    ContatcCell *cell = [ContatcCell cellWithTableView:tableView];
     // 2.设置模型
     // 设置数据
     NJContatc *c = self.contatcs[indexPath.row];

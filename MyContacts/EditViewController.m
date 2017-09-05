@@ -3,7 +3,7 @@
 #import "EditViewController.h"
 #import "Contatc.h"
 
-@interface JHEditViewController ()
+@interface EditViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation JHEditViewController
+@implementation EditViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

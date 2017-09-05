@@ -2,7 +2,7 @@
 #import "AddViewController.h"
 #import "Contatc.h"
 
-@interface JHAddViewController ()
+@interface AddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
@@ -14,7 +14,7 @@
 
 @end
 
-@implementation JHAddViewController
+@implementation AddViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

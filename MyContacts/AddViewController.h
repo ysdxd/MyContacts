@@ -2,17 +2,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class JHAddViewController,NJContatc;
+@class AddViewController,Contatc;
 
-@protocol JHAddViewControllerDelegate <NSObject>
+@protocol AddViewControllerDelegate <NSObject>
 
-- (void)addViewControllerDidAddBtn:(JHAddViewController *)addViewController contatc:(NJContatc *)contatc;
+- (void)addViewControllerDidAddBtn:(AddViewController *)addViewController contatc:(Contatc *)contatc;
 
 @end
 
-@interface JHAddViewController : UIViewController
+@interface AddViewController : UIViewController
 
 
-@property (nonatomic, weak) id<JHAddViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<AddViewControllerDelegate> delegate;
 
 @end

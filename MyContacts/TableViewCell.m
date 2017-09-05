@@ -15,7 +15,7 @@
     static NSString *identifier = @"contatcs";
     
     // 首先回去缓存池中找, 如果找不到回去storyboard中找有没有叫做contatcs的cell,有就创建
-    JHContatcCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    ContatcCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     return cell;
 }

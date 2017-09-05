@@ -135,13 +135,13 @@
         <!--联系人列表-->
         <scene sceneID="7Ov-1w-7tD">
             <objects>
-                <tableViewController id="0ym-ZW-g2d" customClass="JHContatesViewController" sceneMemberID="viewController">
+                <tableViewController id="0ym-ZW-g2d" customClass="ContatesViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6HN-YS-OjQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contatcs" textLabel="fFi-P9-gKZ" detailTextLabel="6ij-G1-JSK" style="IBUITableViewCellStyleValue1" id="DI7-ye-hMd" customClass="JHContatcCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contatcs" textLabel="fFi-P9-gKZ" detailTextLabel="6ij-G1-JSK" style="IBUITableViewCellStyleValue1" id="DI7-ye-hMd" customClass="ContatcCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DI7-ye-hMd" id="wZ8-8J-Pfi">
@@ -194,7 +194,7 @@
         <!--添加联系人-->
         <scene sceneID="c6w-m6-r7W">
             <objects>
-                <viewController id="0Jt-iT-qc4" customClass="JHAddViewController" sceneMemberID="viewController">
+                <viewController id="0Jt-iT-qc4" customClass="AddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f8g-8j-ad4"/>
                         <viewControllerLayoutGuide type="bottom" id="2pQ-vh-xwN"/>
@@ -258,7 +258,7 @@
         <!--编辑联系人-->
         <scene sceneID="sdh-Mr-cP4">
             <objects>
-                <viewController id="btO-e6-rVT" customClass="JHEditViewController" sceneMemberID="viewController">
+                <viewController id="btO-e6-rVT" customClass="EditViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bEi-u8-OIi"/>
                         <viewControllerLayoutGuide type="bottom" id="ce2-yc-Kra"/>

@@ -2,6 +2,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JHContatesViewController : UITableViewController
+@interface ContatesViewController : UITableViewController
 
 @end
