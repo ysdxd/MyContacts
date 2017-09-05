@@ -103,7 +103,7 @@
 }
 
 #pragma mark - JHAddViewControllerDelegate
--(void)addViewControllerDidAddBtn:(JHAddViewController *)addViewController contatc:(NJContatc *)contatc
+-(void)addViewControllerDidAddBtn:(AddViewController *)addViewController contatc:(Contatc *)contatc
 {
     // 1.保存数据到数组中
     [self.contatcs addObject:contatc];
@@ -171,7 +171,7 @@
         return UITableViewCellEditingStyleInsert;
     } else {
         return UITableViewCellEditingStyleDelete;
-    }
+    }
 }
 
 -(NSMutableArray *)contatcs
@@ -188,7 +188,7 @@
     
     return _contatcs;
 }
-
+
 #pragma mark - 数据源
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -203,7 +203,7 @@
     ContatcCell *cell = [ContatcCell cellWithTableView:tableView];
     // 2.设置模型
     // 设置数据
-    NJContatc *c = self.contatcs[indexPath.row];
+    Contatc *c = self.contatcs[indexPath.row];
     cell.contatc = c;
     
     return cell;

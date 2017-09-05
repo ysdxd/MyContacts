@@ -58,7 +58,7 @@
     NSString *name = self.nameField.text;
     NSString *phone = self.phoneField.text;
     
-    NJContatc *c = [[NJContatc alloc]init];
+    Contatc *c = [[Contatc alloc]init];
     c.name = name;
     c.phoneNumber = phone;
     c.email = @"iplaycloud@gmail.com";
