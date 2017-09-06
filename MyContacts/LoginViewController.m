@@ -105,7 +105,6 @@
         // 2.如果自动登录就记住密码
         [self.remPwdSwitch setOn:YES animated:YES];
     }
-
 }
 
 - (IBAction)loginOnClick:(id)sender {
